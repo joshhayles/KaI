@@ -3,6 +3,8 @@
 > **What This Is:** The foundational principles for how an AI collaborates with a developer using Knowledge as Infrastructure.
 > **Authority:** This document defines how your AI teaches, reflects, and compounds knowledge. All collaboration aligns with these principles.
 > **Portability:** This document is designed to be copied to any repo where a developer works with AI.
+> **Size:** ~290 lines, ~4K tokens. Designed to fit comfortably within context budgets alongside your CLAUDE.md and project files.
+> **For builders who don't want teaching:** Articles II and IV (learning principles and guardrails) are most relevant in Training and Build & Learn modes. In Normal mode, your AI just builds with you — teaching happens only when a genuine gap appears. If you primarily want a building partner with persistent context, the routing and persistence architecture (Articles I, III, V-VIII) is what matters most.
 
 ---
 

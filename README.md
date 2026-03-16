@@ -38,7 +38,11 @@ KaI lives in your repo as structured files your AI knows how to use and navigate
 | **profile.md** | *(created during onboarding)* Who you are — your experience, goals, and how you learn best. Valuable context for your AI. |
 | **projects/** | Your active work — goals, status, decisions, learnings. Your AI reads a project README and has full context in seconds, not minutes of re-explaining. |
 
-The Constitution and CLAUDE.md come with KaI. Your profile and projects are created together during onboarding — that's what "Onboard me" kicks off.
+The Constitution and CLAUDE.md come with KaI. Your profile and projects are created together during onboarding — that's what "Onboard me" kicks off. See [examples/CLAUDE-example.md](examples/CLAUDE-example.md) for what a populated setup looks like.
+
+KaI also includes a built-in **teaching system** with three modes. **Normal** (default) — your AI just works, teaches briefly when relevant. **Training** — say "let's learn" and your AI quizzes you, tracks understanding, runs full learning protocols. **Build & Learn** — say "let's build and learn" for real work with learning woven in. You configure your preferences during onboarding.
+
+> **Note:** KaI is currently designed for solo developers. Team support is planned.
 
 ---
 
@@ -59,20 +63,30 @@ I'm still learning, and this is one approach that's been working for me — I ma
 Run this from your project's root directory:
 
 ```bash
-# 1. Clone KaI into your repo root
-git clone https://github.com/joshhayles/KaI.git .kai-tmp
-cp .kai-tmp/KAI-CONSTITUTION.md .kai-tmp/CLAUDE.md .kai-tmp/ONBOARD-ME.md .kai-tmp/CUSTOMIZE.md .
-rm -rf .kai-tmp
+# 1. Install KaI
+curl -fsSL https://raw.githubusercontent.com/joshhayles/KaI/main/kai-init.sh | bash
 
 # 2. Open Claude Code and say:
 # "Onboard me."
 ```
+
+Or manually: clone the repo, copy `KAI-CONSTITUTION.md`, `CLAUDE.md`, `ONBOARD-ME.md`, and `CUSTOMIZE.md` to your project root.
 
 Your Claude will walk you through a real conversation — who you are, what you're building, how you learn best. It produces a personalized setup: your profile, your project structure, your AI's identity. Everything lives in your repo, and is fully controlled by you.
 
 After onboarding, just start working. Next time you open Claude Code, your AI reads your profile and project state automatically — no setup, no re-explaining. That's the compounding.
 
 **The core principle:** You should be able to delete any AI session and start fresh with zero context loss. If something matters, it's in a file.
+
+---
+
+## What's Next
+
+After onboarding, check out:
+- **[CUSTOMIZE.md](CUSTOMIZE.md)** — add routes, domains, and projects as your work evolves
+- **"Let's learn"** — say this anytime to activate Training mode (quizzes, deeper explanations)
+- **"Let's build and learn"** — real work with learning bookends
+- **[examples/](examples/)** — see what a populated CLAUDE.md looks like
 
 ---
 
