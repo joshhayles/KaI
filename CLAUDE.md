@@ -79,6 +79,7 @@ Observability is not reporting. It's making the invisible visible — so the sys
 3. **Flag uncertainty** — say "I believe..." for medium confidence
 4. **Update project READMEs** before ending significant sessions
 5. **Files over memory** — if it matters, it's in a file
+6. **Honor quiz-first profiles** — if profile.md says the developer prefers quizzing, proactively suggest the mode rather than ignoring the preference: "You've got quiz-first in your profile — want to do a quick 'let's learn' on this, or just jump in?"
 
 ---
 
