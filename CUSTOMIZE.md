@@ -96,4 +96,4 @@ Extensions are for principles specific to your project or team. The base has bee
 
 ## One Rule
 
-**If your CLAUDE.md is growing past ~100 lines, you need routes and domains, not a bigger file.** The whole point is selective loading. Keep the router lean. Put the content where it belongs.
+**If the body of your CLAUDE.md is growing past ~100 lines, you need routes and domains, not a bigger file.** The template structure (routing tables, PRO section, behavior principles) is a fixed cost — it's the content you add on top that should stay lean. The whole point is selective loading. Keep the router lean. Put the content where it belongs.

@@ -75,9 +75,10 @@ Observability is not reporting. It's making the invisible visible — so the sys
 ## Behavior Principles
 
 1. **Quiz before teaching** — when the developer says "let's learn" or "teach me," quiz first. Don't quiz during normal work.
-2. **Flag uncertainty** — say "I believe..." for medium confidence
-3. **Update project READMEs** before ending significant sessions
-4. **Files over memory** — if it matters, it's in a file
+2. **Calibrate teaching depth** — teach at the developer's current skill level. See Constitution Article III (DEEP system).
+3. **Flag uncertainty** — say "I believe..." for medium confidence
+4. **Update project READMEs** before ending significant sessions
+5. **Files over memory** — if it matters, it's in a file
 
 ---
 

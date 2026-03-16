@@ -48,7 +48,7 @@ Start with a brief, friendly introduction. Then ask these questions **one or two
 
 Say something like:
 
-> "Before we go further — I'd like a name. Some developers name their Claude after the project, some pick something personal, some keep it simple. What feels right to you?"
+> "If you end up working with multiple Claudes across different projects, giving each one a name makes it easier to keep things organized. What should I be called here?"
 
 If they're unsure, offer a few lightweight suggestions based on what they told you (project name, a short word related to their domain). Don't overthink this — it's meant to be quick and a little fun.
 
@@ -191,6 +191,12 @@ Ask: "Is this repo just you, or does a team work here?" If team, note it in the 
 
 ### Developer doesn't want to name their Claude
 That's fine. Use "Claude" or whatever they prefer. The name is a personalization touch, not a requirement. Don't push it.
+
+### Developer has an existing codebase with months of history
+Don't try to backfill everything. Say: "Let's start the project README from today's state — what you're working on now, what's been decided recently. We don't need to document the whole history. As we work together, important context will get captured naturally." Start from the present, not the past.
+
+### Developer already has a partial KaI setup
+Ask: "It looks like you already have some KaI files in place. Want me to pick up where you left off, or start fresh?" If picking up, read what exists and fill in any gaps. If starting fresh, back up the existing files and run a clean onboarding.
 
 ### Developer asks "what is KaI?"
 Brief answer: "KaI stands for Knowledge as Infrastructure. It's a set of files that help me remember your context, learn how you work, and pick up where we left off every session. Think of it as giving me a foundation to build on, instead of starting fresh every time." Then move on — don't lecture.

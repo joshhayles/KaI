@@ -35,7 +35,7 @@ KaI lives in your repo as structured files your AI knows how to use and navigate
 |------|-------------|
 | **KAI-CONSTITUTION.md** | 12 principles that shape how your AI collaborates with you — teaching, context-loading, guardrails. The rules of engagement. |
 | **CLAUDE.md** | Your AI's identity and routing logic. Points to what matters for **each** session — doesn't load everything at once. |
-| **profile.md** | Who you are — your experience, goals, and how you learn best. Valuable context for your AI. |
+| **profile.md** | *(created during onboarding)* Who you are — your experience, goals, and how you learn best. Valuable context for your AI. |
 | **projects/** | Your active work — goals, status, decisions, learnings. Your AI reads a project README and has full context in seconds, not minutes of re-explaining. |
 
 The Constitution and CLAUDE.md come with KaI. Your profile and projects are created together during onboarding — that's what "Onboard me" kicks off.
@@ -57,8 +57,10 @@ I'm still learning, and this is one approach that's been working for me — I ma
 ## Getting Started
 
 ```bash
-# 1. Clone KaI into your project
-git clone https://github.com/joshhayles/kai.git your-project/kai
+# 1. Clone KaI into your repo root
+git clone https://github.com/joshhayles/KaI.git .kai-tmp
+cp .kai-tmp/KAI-CONSTITUTION.md .kai-tmp/CLAUDE.md .kai-tmp/ONBOARD-ME.md .kai-tmp/CUSTOMIZE.md .
+rm -rf .kai-tmp
 
 # 2. Open Claude Code and say:
 # "Onboard me."
@@ -68,13 +70,15 @@ Your Claude will walk you through a real conversation — who you are, what you'
 
 After onboarding, just start working. Next time you open Claude Code, your AI reads your profile and project state automatically — no setup, no re-explaining. That's the compounding.
 
+**The core principle:** You should be able to delete any AI session and start fresh with zero context loss. If something matters, it's in a file.
+
 ---
 
 ## Roadmap
 
 | Phase | What | Status |
 |-------|------|--------|
-| **Core** | Constitution + CLAUDE.md + onboarding | In progress |
+| **Core** | Constitution + CLAUDE.md + onboarding | v0.1 |
 | **Methodology** | Project lifecycle, skill progression, structured reflection | Coming soon |
 | **Ecosystem** | Multi-AI coordination, cross-instance messaging | Future |
 
