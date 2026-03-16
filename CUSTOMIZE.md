@@ -1,0 +1,99 @@
+# Customizing KaI
+
+> After onboarding, KaI works out of the box. This guide is for later — when you want to add routes, adjust your Claude's behavior, or expand your project structure.
+> None of this is required. Start working first. Come back here when you feel the need.
+
+---
+
+## Adding Context Routes
+
+During onboarding, you and your Claude built your initial routing table. As your project grows, add more:
+
+```markdown
+| Developer Says | Action |
+|----------------|--------|
+| "Let's work on the API" | Read `domains/api/decisions.md` |
+| "What's our test strategy?" | Read `domains/testing/strategy.md` |
+```
+
+**When to add a route:** When you catch yourself re-explaining the same context more than once. That's the signal — capture it in a file and add a route.
+
+**When NOT to add a route:** Don't create files "just in case." Add structure when you feel friction, not before.
+
+---
+
+## Domain Folders
+
+If your project has distinct knowledge areas, create a `domains/` folder:
+
+```
+domains/
+├── auth/           ← Architecture decisions, conventions
+├── database/       ← Schema patterns, migration history
+└── deployment/     ← Infrastructure, CI/CD
+```
+
+Each folder holds markdown files your Claude reads **only when the conversation enters that topic.** Start with one domain when you need it. Let it grow from there.
+
+---
+
+## Projects
+
+### New Projects
+
+```
+projects/active/my-feature/
+└── README.md       ← Goal, current state, decisions, learnings
+```
+
+The README is the only required file. Your Claude reads it at session start when you reference this project — that's the bookmark.
+
+### Completing Projects
+
+```bash
+mv projects/active/my-feature projects/completed/my-feature
+```
+
+History stays. Your Claude can reference completed projects when relevant.
+
+### Phases (Optional)
+
+For larger projects, add phase folders with their own READMEs. Small projects don't need phases — use them when the scope outgrows a single README.
+
+---
+
+## Profile Updates
+
+Your `profile.md` evolves. Update it when:
+- You're learning a new stack (helps your Claude teach at the right level)
+- Your role or goals change
+- You discover new preferences about how you work with AI
+
+### Team Usage
+
+Multiple people in one repo can each have a profile:
+
+```
+domains/alice/profile.md
+domains/bob/profile.md
+```
+
+---
+
+## Constitution Extensions
+
+Principles 1–12 are the base. Don't modify them — extend after #12:
+
+```markdown
+### 13. Always Test First *(Repo Extension)*
+
+Write tests before implementation in this repo.
+```
+
+Extensions are for principles specific to your project or team. The base has been tested across multiple production contexts — add to it rather than changing it.
+
+---
+
+## One Rule
+
+**If your CLAUDE.md is growing past ~100 lines, you need routes and domains, not a bigger file.** The whole point is selective loading. Keep the router lean. Put the content where it belongs.
