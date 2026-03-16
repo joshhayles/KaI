@@ -36,7 +36,7 @@ KaI lives in your repo as structured files your AI knows how to use and navigate
 | **KAI-CONSTITUTION.md** | 12 principles that shape how your AI collaborates with you — teaching, context-loading, guardrails. The rules of engagement. |
 | **CLAUDE.md** | Your AI's identity and routing logic. Points to what matters for **each** session — doesn't load everything at once. |
 | **profile.md** | *(created during onboarding)* Who you are — your experience, goals, and how you learn best. Valuable context for your AI. |
-| **projects/** | Your active work — goals, status, decisions, learnings. Your AI reads a project README and has full context in seconds, not minutes of re-explaining. |
+| **projects/** | Your active work — goals, status, decisions, learnings. Your AI reads a project README and has full context in seconds, not minutes of re-explaining. Handles context-switching between multiple projects automatically — see [the example](examples/CLAUDE-example.md). |
 
 The Constitution and CLAUDE.md come with KaI. Your profile and projects are created together during onboarding — that's what "Onboard me" kicks off. See [examples/CLAUDE-example.md](examples/CLAUDE-example.md) for what a populated setup looks like.
 
