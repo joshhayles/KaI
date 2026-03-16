@@ -78,6 +78,8 @@ domains/alice/profile.md
 domains/bob/profile.md
 ```
 
+For shared team conventions (coding standards, naming patterns, review process), create `domains/team/conventions.md` and add a route in CLAUDE.md.
+
 ---
 
 ## Constitution Extensions

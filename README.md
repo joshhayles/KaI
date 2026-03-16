@@ -22,7 +22,7 @@ So you repeat yourself. Session after session, you re-explain the same context, 
 |---|---|
 | Your AI remembers preferences but not history | Your AI reads your project goals, recent decisions, and established conventions — and picks up exactly where you left off |
 | You re-explain decisions you already made | Decisions, context, and rationale are captured as you work — with the *why*, not just the *what* |
-| Your AI gives the same explanations regardless of your level | Your AI knows your experience level and teaches while it builds — brief context during the work, calibrated to what you already know |
+| Your AI gives the same explanations regardless of your level | Your AI knows your level — no over-explaining, no condescending basics. It works at your pace, the way you configured it |
 | Sessions are independent | Every session builds on the last — new insights feed back into your context automatically |
 
 ---

@@ -31,9 +31,23 @@ Start with a brief, friendly introduction. Then ask these questions **one or two
    - The project, its purpose, where it stands
    - Listen for: tech stack, stage (greenfield vs. existing), what problems they're solving
 
-3. **"How do you learn best?"**
-   - Don't ask this directly if it feels awkward — instead, ask: "When you're working with AI, what frustrates you?" or "What's the best AI collaboration experience you've had?"
-   - Listen for: preferences around explanation depth, code-first vs. concept-first, whether they want to be taught or just want execution
+3. **Set their working preferences.** After you know who they are and what they're building, ask these three questions. They're quick, but they directly configure how you'll work together:
+
+   **Working style:**
+   > "When we're building together, do you want me to explain the *why* behind decisions as we go, or do you prefer I just build and you ask when you're curious?"
+
+   **Learning preferences:**
+   > "When you hit something new, do you want me to quiz you first, walk you through it with examples, or just show you the code?"
+
+   **Feedback style:**
+   > "When I notice something worth flagging — a pattern, a tradeoff, a better approach — do you want me to speak up, or stay quiet unless you ask?"
+
+   These answers produce precise profile entries:
+   - "Wants explanations of the why as we go" vs. "explains-on-request only"
+   - "Wants to be quizzed before explanations" vs. "show-me-the-code first"
+   - "Wants proactive flags" vs. "stays quiet unless asked"
+
+   These preferences directly shape how you behave in every future session. Don't skip this step — even a developer who says "just build" is giving you useful configuration.
 
 ### What NOT to do:
 - Don't explain KaI's philosophy yet. They'll experience it, not hear about it.
@@ -122,6 +136,8 @@ The developer should leave this step understanding: what routes are, that they b
 
 **Keep the router structure intact.** The event handler table, the selective loading table, the PRO section — these stay. Fill in the placeholders and routes with real values from the conversation.
 
+**If profile.md was placed in a subdirectory** (e.g., `domains/{name}/profile.md` for team repos), update the CLAUDE.md Load Context path to match. Otherwise the AI will look for `profile.md` at root and silently miss it.
+
 Don't explain every section — they'll see it work in practice.
 
 ### 3c: Create first project
@@ -158,6 +174,8 @@ Create `projects/active/{project-name}/README.md`:
 Close with something like:
 
 > "We're set. Your profile, my instructions, and your first project are all in place. Just start working — on whatever you were going to do today. Next time you open a session, I'll read your profile and project state automatically. No re-explaining, no setup. That's the compounding."
+>
+> "One more thing — if you ever want me to quiz you or run a dedicated learning session, just say 'let's learn.' If you want to build something while learning the concepts behind it, say 'let's build and learn.' Otherwise, I'll just work with you normally."
 
 Then **stop talking about KaI and start working.** If they came here with a task in mind, pivot to it immediately. The best onboarding ends with real work, not more setup.
 
@@ -190,7 +208,7 @@ ONBOARD-ME.md stays in the repo so future sessions can re-run onboarding if need
 ## Edge Cases
 
 ### Developer wants to skip onboarding
-Respect it. Say: "No problem — I'll set up the basics in the background. If you want to customize later, just say 'let's set up my profile.'" Create a minimal profile.md and CLAUDE.md with what you can infer, and get to work.
+Respect it. Say: "No problem — I'll set up the basics in the background. If you want to customize later, just say 'let's set up my profile.'" Create a minimal setup with at least: their name, their stack (inferred from the repo), the current project name, and one inferred route. That's the floor — enough for the AI to be useful next session.
 
 ### Developer already has a CLAUDE.md
 Don't overwrite it. Say: "You've already got a CLAUDE.md — want me to enhance it with KaI's structure, or keep yours as-is and just add the project tracking?" Merge, don't replace.
