@@ -68,7 +68,7 @@ This is where you create the actual files. Do this in the conversation — tell 
 
 ### 3a: Create profile.md
 
-Create `profile.md` in the repo root (or `domains/{name}/profile.md` if they prefer organization).
+Create `profile.md` in the repo root for solo developers. If multiple people share the repo, use `domains/{name}/profile.md` instead.
 
 Contents — built from what they told you in Stage 1:
 
@@ -101,9 +101,13 @@ Take the CLAUDE.md template and fill in:
 - The repo's purpose
 - Their current project in the Session Start table
 
-**Build the context routes together.** Based on what they told you in Stage 1, set up the initial routing table WITH the developer. You know their project, their stack, their domain — turn that into real routes:
+**Explain routes before building them.** This is one of the most valuable parts of KaI — take a moment to help the developer understand what they're building. Say something like:
 
-> "Based on what you've told me, here's how I'd organize context for this project — these are the routes I'll use to know what to load each session:"
+> "Here's one of the most useful parts of this setup. When you mention you want to work on something, I don't automatically know what context to load. But if we build a routing table — 'when you say X, I read Y' — I'll always load exactly the right context without you re-explaining. Let me seed it with what you've told me, then you tell me what's missing."
+
+Then show one example route based on their project, let them react, and build from there:
+
+> "Based on what you've told me, here's how I'd start:"
 
 ```markdown
 | Developer Says | Action |
@@ -112,7 +116,9 @@ Take the CLAUDE.md template and fill in:
 | References {domain from their stack} | Read `domains/{domain}/` |
 ```
 
-Ask: "Does this match how you think about the project? Anything else I should route to?" Let them adjust. The routes should reflect how THEY think about their work, not how you'd organize it.
+Ask: "Does this match how you think about the project? Anything else I should route to? You can always add more later — whenever you catch yourself re-explaining the same context, that's a signal to add a route." Let them adjust. The routes should reflect how THEY think about their work, not how you'd organize it.
+
+The developer should leave this step understanding: what routes are, that they built them together, and that they can add more anytime.
 
 **Keep the router structure intact.** The event handler table, the selective loading table, the PRO section — these stay. Fill in the placeholders and routes with real values from the conversation.
 
@@ -138,7 +144,8 @@ Create `projects/active/{project-name}/README.md`:
 {What they want to work on first}
 
 ## Decisions
-{Any decisions already made that they mentioned}
+{Any decisions already made that they mentioned — ask: "Any decisions already made I should capture? Even quick ones like 'we chose FastAPI over Flask' or 'we're using Postgres, not MongoDB.'"}
+
 
 ## Learnings
 {Empty for now — this is where reflections accumulate}
@@ -157,6 +164,8 @@ Then **stop talking about KaI and start working.** If they came here with a task
 ---
 
 ## After Onboarding
+
+ONBOARD-ME.md stays in the repo so future sessions can re-run onboarding if needed. The developer doesn't need to read it — it's instructions for you.
 
 ### What the developer now has:
 - `profile.md` — who they are, how they learn, what they're building

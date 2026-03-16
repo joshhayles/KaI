@@ -27,7 +27,7 @@ Read only what this conversation needs. Don't load everything every time.
 | `KAI-CONSTITUTION.md` | Every session (behavioral foundation) |
 | `projects/active/{project}/README.md` | When working on a specific project |
 | `domains/{topic}/` | When the conversation enters that domain |
-| `profile.md` | When personalizing teaching or career context matters |
+| `profile.md` | Every session (who the developer is, how they learn) |
 
 ### Step 3: State Check
 

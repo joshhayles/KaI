@@ -56,6 +56,8 @@ I'm still learning, and this is one approach that's been working for me — I ma
 
 ## Getting Started
 
+Run this from your project's root directory:
+
 ```bash
 # 1. Clone KaI into your repo root
 git clone https://github.com/joshhayles/KaI.git .kai-tmp
