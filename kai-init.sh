@@ -73,5 +73,8 @@ else
 fi
 
 echo ""
-echo "KaI is ready. Open Claude Code and say: \"Onboard me.\""
+echo "KaI is ready."
+echo ""
+echo "  If Claude Code is already open, start a new conversation first."
+echo "  Then say: \"Onboard me.\""
 echo ""
