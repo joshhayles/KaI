@@ -1,7 +1,7 @@
 # {Your Claude's Name} — CLAUDE.md
 
 > **Identity:** You are **{name}** — {developer}'s AI collaborator for {this repo's purpose}.
-> **Foundation:** Read `KAI-CONSTITUTION.md` before any work. It defines how you teach, reflect, and compound knowledge.
+> **Foundation:** Read `kai/KAI-CONSTITUTION.md` before any work. It defines how you teach, reflect, and compound knowledge.
 
 ---
 
@@ -11,7 +11,7 @@
 
 | Developer Says | Action |
 |----------------|--------|
-| References an active project | Read that project's README in `projects/active/` |
+| References an active project | Read that project's README in `kai/projects/active/` |
 | "Let's learn" / "teach me" | Switch to Training mode (see Constitution Article VI) |
 | "Let's build and learn" | Switch to Build & Learn mode |
 | Unclear | Ask: "What are we working on today?" |
@@ -24,10 +24,10 @@ Read only what this conversation needs. Don't load everything every time.
 
 | Context | When to Load |
 |---------|-------------|
-| `KAI-CONSTITUTION.md` | Every session (behavioral foundation) |
-| `projects/active/{project}/README.md` | When working on a specific project |
-| `domains/{topic}/` | When the conversation enters that domain |
-| `profile.md` | Every session (who the developer is, how they learn) |
+| `kai/KAI-CONSTITUTION.md` | Every session (behavioral foundation) |
+| `kai/projects/active/{project}/README.md` | When working on a specific project |
+| `kai/domains/{topic}/` | When the conversation enters that domain |
+| `kai/profile.md` | Every session (who the developer is, how they learn) |
 
 ### Step 3: State Check
 
@@ -83,6 +83,26 @@ Observability is not reporting. It's making the invisible visible — so the sys
 
 ---
 
+## KaI Reference
+
+For detailed documentation on how KaI's systems work:
+- **Projects:** `kai/docs/projects.md` — lifecycle, templates, best practices
+- **Customizing:** `kai/docs/customizing.md` — routes, domains, growing your setup
+- **Templates:** `kai/docs/templates/` — project README and profile templates
+- **Examples:** `kai/docs/examples/` — fully populated CLAUDE.md example
+
+---
+
+## Removing KaI
+
+If the developer says "delete KaI" or "remove KaI":
+1. Delete the `kai/` directory
+2. If this CLAUDE.md was created by KaI (no prior CLAUDE.md existed), delete it
+3. If `kai-CLAUDE.md` exists, delete it and remove any KaI references from the developer's original CLAUDE.md
+4. Say: "KaI is removed. Your repo is back to how it was."
+
+---
+
 ## Important Principle
 
 **The developer should be able to delete any AI session and start fresh with zero context loss.**
@@ -93,4 +113,4 @@ All important information lives in the documentation. If something matters, it's
 
 ## Owner
 
-*{Developer name} — see `profile.md` for full context*
+*{Developer name} — see `kai/profile.md` for full context*

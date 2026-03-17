@@ -31,14 +31,29 @@ Context that compounds into:
 
 ## How It Works
 
-KaI lives in your repo as structured files your AI reads and navigates. Each piece has a job, and they connect to form a system.
+KaI adds a `kai/` folder to your repo plus one file at root (`CLAUDE.md`). Everything is organized and self-contained.
+
+```
+your-repo/
+  CLAUDE.md                     ← your AI reads this every session (routing + identity)
+  kai/
+    KAI-CONSTITUTION.md         ← 12 collaboration principles
+    profile.md                  ← who you are (created during onboarding)
+    projects/                   ← your active work, decisions, learnings
+    docs/                       ← reference docs, templates, examples
+```
+
+Already have a `CLAUDE.md`? No problem — KaI detects it and creates `kai-CLAUDE.md` instead. During onboarding, your Claude helps you connect the two.
+
+**Don't like KaI?** Just tell Claude "delete KaI" and it's gone. One folder removed, your repo is back to how it was.
 
 | File | What It Does |
 |------|-------------|
-| **KAI-CONSTITUTION.md** | 12 principles that shape how your AI collaborates — teaching, context-loading, guardrails. The rules of engagement. |
 | **CLAUDE.md** | Your AI's identity, behavior, and routing table. Maps topics to context files — "when you say X, I load Y." |
-| **profile.md** | *(created during onboarding)* Who you are — experience, goals, how you work best. Your AI reads this every session. |
-| **projects/** | Your active work — goals, status, decisions, learnings. Your AI reads a project README and has full context in seconds. |
+| **kai/KAI-CONSTITUTION.md** | 12 principles that shape how your AI collaborates — teaching, context-loading, guardrails. |
+| **kai/profile.md** | *(created during onboarding)* Who you are — experience, goals, how you work best. |
+| **kai/projects/** | Your active work — goals, status, decisions, learnings. Your AI reads a project README and has full context in seconds. |
+| **kai/docs/** | Project guides, templates, examples — reference material for you and your Claude. |
 
 ### The Routing Table
 
@@ -52,7 +67,7 @@ The routing table is the core of CLAUDE.md. Instead of loading everything, your 
 | "API design"   | → routes/api.md + decisions log   |
 ```
 
-*(These are examples — you build your own routes during onboarding and add more as your project grows. See [examples/CLAUDE-example.md](examples/CLAUDE-example.md) for a fully populated setup.)*
+*(These are examples — you build your own routes during onboarding and add more as your project grows. See [kai/docs/examples/CLAUDE-example.md](kai/docs/examples/CLAUDE-example.md) for a fully populated setup.)*
 
 MCP and skills route your AI to the right *tool*. KaI routes your AI to the right *context about you*. And because KaI knows who you are, the same topic can load differently based on your preferences and skill level. That's developer-aware context routing.
 
@@ -96,7 +111,7 @@ curl -fsSL https://raw.githubusercontent.com/joshhayles/KaI/main/kai-init.sh | b
 # "Onboard me."
 ```
 
-Or manually: clone the repo, copy `KAI-CONSTITUTION.md`, `CLAUDE.md`, `ONBOARD-ME.md`, and `CUSTOMIZE.md` to your project root.
+Or manually: clone the repo, copy the `kai/` folder and `CLAUDE.md` to your project root.
 
 Your Claude walks you through a real conversation — not a form. Who you are, what you're building, how you want to work. It asks how you prefer to learn, whether you want explanations as you go or just want to build, and how much feedback you want. Then it produces a personalized setup: your profile, your routing table, your project structure. Everything lives in your repo, fully controlled by you.
 
@@ -109,10 +124,11 @@ After onboarding, just start working. Next session, your AI reads your profile a
 ## What's Next
 
 After onboarding:
-- **[CUSTOMIZE.md](CUSTOMIZE.md)** — add routes, domains, and projects as your work evolves
+- **[kai/docs/customizing.md](kai/docs/customizing.md)** — add routes, domains, and projects as your work evolves
+- **[kai/docs/projects.md](kai/docs/projects.md)** — project lifecycle, templates, and best practices
 - **"Let's learn"** — activate Training mode anytime
 - **"Let's build and learn"** — real work with learning bookends
-- **[examples/](examples/)** — see a fully populated CLAUDE.md
+- **[kai/docs/examples/](kai/docs/examples/)** — see a fully populated CLAUDE.md
 
 ---
 
@@ -121,7 +137,7 @@ After onboarding:
 | Phase | What | Status |
 |-------|------|--------|
 | **Core** | Constitution + routing + onboarding + developer-aware context | v0.1 |
-| **Methodology** | Project lifecycle, skill progression, structured reflection | Coming soon |
+| **Methodology** | Project lifecycle, templates, structured reflection | v0.2 |
 | **KaI Integrations** | Developer-aware routing extended to MCP servers, workflows, and external tools | Planned |
 | **Ecosystem** | Multi-AI coordination, cross-instance context sharing | Future |
 

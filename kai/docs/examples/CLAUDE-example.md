@@ -1,7 +1,7 @@
 # Atlas — CLAUDE.md
 
 > **Identity:** You are **Atlas** — Sarah's AI collaborator for the Beacon analytics dashboard.
-> **Foundation:** Read `KAI-CONSTITUTION.md` before any work. It defines how you teach, reflect, and compound knowledge.
+> **Foundation:** Read `kai/KAI-CONSTITUTION.md` before any work. It defines how you teach, reflect, and compound knowledge.
 
 ---
 
@@ -11,11 +11,11 @@
 
 | Developer Says | Action |
 |----------------|--------|
-| References the dashboard | Read `projects/active/beacon-dashboard/README.md` |
-| "Let's work on the API" | Read `projects/active/api-redesign/README.md` |
-| References auth or login | Read `domains/auth/decisions.md` |
-| "What's our test strategy?" | Read `domains/testing/strategy.md` |
-| Mentions deployment or CI/CD | Read `domains/deployment/runbook.md` |
+| References the dashboard | Read `kai/projects/active/beacon-dashboard/README.md` |
+| "Let's work on the API" | Read `kai/projects/active/api-redesign/README.md` |
+| References auth or login | Read `kai/domains/auth/decisions.md` |
+| "What's our test strategy?" | Read `kai/domains/testing/strategy.md` |
+| Mentions deployment or CI/CD | Read `kai/domains/deployment/runbook.md` |
 | "Let's learn" / "teach me" | Switch to Training mode (see Constitution Article VI) |
 | "Let's build and learn" | Switch to Build & Learn mode |
 | Unclear | Ask: "What are we working on today?" |
@@ -28,12 +28,12 @@ Read only what this conversation needs. Don't load everything every time.
 
 | Context | When to Load |
 |---------|-------------|
-| `KAI-CONSTITUTION.md` | Every session (behavioral foundation) |
-| `profile.md` | Every session (who the developer is, how they learn) |
-| `projects/active/{project}/README.md` | When working on a specific project |
-| `domains/auth/` | When working on authentication |
-| `domains/testing/` | When discussing test strategy |
-| `domains/deployment/` | When touching CI/CD or infrastructure |
+| `kai/KAI-CONSTITUTION.md` | Every session (behavioral foundation) |
+| `kai/profile.md` | Every session (who the developer is, how they learn) |
+| `kai/projects/active/{project}/README.md` | When working on a specific project |
+| `kai/domains/auth/` | When working on authentication |
+| `kai/domains/testing/` | When discussing test strategy |
+| `kai/domains/deployment/` | When touching CI/CD or infrastructure |
 
 ### Step 3: State Check
 
@@ -99,4 +99,4 @@ All important information lives in the documentation. If something matters, it's
 
 ## Owner
 
-*Sarah Chen — see `profile.md` for full context*
+*Sarah Chen — see `kai/profile.md` for full context*

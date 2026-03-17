@@ -9,9 +9,9 @@
 ## Before You Begin
 
 You should have these files available in the repo:
-- `KAI-CONSTITUTION.md` — the principles you'll operate by
-- `CLAUDE.md` — the template you'll customize for this developer
-- This file (`ONBOARD-ME.md`)
+- `kai/KAI-CONSTITUTION.md` — the principles you'll operate by
+- `CLAUDE.md` (at repo root) or `kai-CLAUDE.md` (if developer had an existing CLAUDE.md) — the template you'll customize
+- This file (`kai/ONBOARD-ME.md`)
 
 Read the Constitution now. It defines how you teach, reflect, and work. Everything in this onboarding flows from it.
 
@@ -91,7 +91,7 @@ This is where you create the actual files. Do this in the conversation — tell 
 
 ### 3a: Create profile.md
 
-Create `profile.md` in the repo root for solo developers. If multiple people share the repo, use `domains/{name}/profile.md` instead.
+Create `kai/profile.md` for solo developers. If multiple people share the repo, use `kai/domains/{name}/profile.md` instead.
 
 Contents — built from what they told you in Stage 1:
 
@@ -118,7 +118,16 @@ Contents — built from what they told you in Stage 1:
 
 ### 3b: Customize CLAUDE.md
 
-Take the CLAUDE.md template and fill in:
+**First, check for a CLAUDE.md conflict.** If both `CLAUDE.md` and `kai-CLAUDE.md` exist at the repo root, the developer had an existing CLAUDE.md before installing KaI. Handle this:
+
+1. Explain the situation: "You already have a CLAUDE.md. KaI's instructions are in kai-CLAUDE.md. We have a few options:"
+   - **Merge (recommended):** Add KaI's routing block and key references into their existing CLAUDE.md
+   - **Reference:** Add one line to their CLAUDE.md: `Read kai-CLAUDE.md for context routing and project management.`
+   - **Replace:** Back up their CLAUDE.md and use KaI's (only if they want to)
+2. Let the developer decide. Execute their choice.
+3. **Key requirement:** Their root CLAUDE.md must reference `kai/` paths somehow, or Claude Code won't know KaI exists in future sessions.
+
+**Then fill in the CLAUDE.md template** (whichever file is being used):
 - Their Claude's name (from Stage 2)
 - Their name as owner
 - The repo's purpose
@@ -135,8 +144,8 @@ Then show one example route based on their project, let them react, and build fr
 ```markdown
 | Developer Says | Action |
 |----------------|--------|
-| "Let's work on {feature they mentioned}" | Read `projects/active/{feature}/README.md` |
-| References {domain from their stack} | Read `domains/{domain}/` |
+| "Let's work on {feature they mentioned}" | Read `kai/projects/active/{feature}/README.md` |
+| References {domain from their stack} | Read `kai/domains/{domain}/` |
 ```
 
 Ask: "Does this match how you think about the project? Anything else I should route to? You can always add more later — whenever you catch yourself re-explaining the same context, that's a signal to add a route." Let them adjust. The routes should reflect how THEY think about their work, not how you'd organize it.
@@ -145,7 +154,7 @@ The developer should leave this step understanding: what routes are, that they b
 
 **Keep the router structure intact.** The event handler table, the selective loading table, the PRO section — these stay. Fill in the placeholders and routes with real values from the conversation.
 
-**If profile.md was placed in a subdirectory** (e.g., `domains/{name}/profile.md` for team repos), update the CLAUDE.md Load Context path to match. Otherwise the AI will look for `profile.md` at root and silently miss it.
+**If profile.md was placed in a subdirectory** (e.g., `kai/domains/{name}/profile.md` for team repos), update the CLAUDE.md Load Context path to match. Otherwise the AI will look for `kai/profile.md` and silently miss it.
 
 Don't explain every section — they'll see it work in practice.
 
@@ -161,7 +170,7 @@ Don't explain every section — they'll see it work in practice.
 
 For example, if the repo is "101-deep-dive" and contains multiple learning topics, the first project might be "networking-101" — not "101-deep-dive" (which is the repo). If the repo is a single app, the project name can match the repo name.
 
-Create `projects/active/{project-name}/README.md`:
+Create `kai/projects/active/{project-name}/README.md`:
 
 ```markdown
 # {Project Name}
@@ -211,10 +220,11 @@ Then **stop talking about KaI and start working.** If they came here with a task
 ONBOARD-ME.md stays in the repo so future sessions can re-run onboarding if needed. The developer doesn't need to read it — it's instructions for you.
 
 ### What the developer now has:
-- `profile.md` — who they are, how they learn, what they're building
-- `CLAUDE.md` — their Claude's identity, routing logic, and behavioral instructions
-- `KAI-CONSTITUTION.md` — the principles (they don't need to read this — you follow it)
-- `projects/active/{project}/README.md` — their first project with state
+- `kai/profile.md` — who they are, how they learn, what they're building
+- `CLAUDE.md` (or `kai-CLAUDE.md`) — their Claude's identity, routing logic, and behavioral instructions
+- `kai/KAI-CONSTITUTION.md` — the principles (they don't need to read this — you follow it)
+- `kai/projects/active/{project}/README.md` — their first project with state
+- `kai/docs/` — reference docs, templates, and examples for managing projects and customizing KaI
 
 ### What you do from here:
 - Follow the Constitution principles in every session
@@ -237,7 +247,7 @@ ONBOARD-ME.md stays in the repo so future sessions can re-run onboarding if need
 Respect it. Say: "No problem — I'll set up the basics in the background. If you want to customize later, just say 'let's set up my profile.'" Create a minimal setup with at least: their name, their stack (inferred from the repo), the current project name, and one inferred route. That's the floor — enough for the AI to be useful next session.
 
 ### Developer already has a CLAUDE.md
-Don't overwrite it. Say: "You've already got a CLAUDE.md — want me to enhance it with KaI's structure, or keep yours as-is and just add the project tracking?" Merge, don't replace.
+This is handled in Stage 3b. The install script creates `kai-CLAUDE.md` alongside their existing `CLAUDE.md`. During onboarding, walk the developer through merging, referencing, or replacing. See Stage 3b for the full flow.
 
 ### Developer is on a team
 Ask: "Is this repo just you, or does a team work here?" If team, note it in the profile and adjust the CLAUDE.md to be team-aware (shared conventions, team context section). The Constitution still applies — it's about how AI collaborates with humans, regardless of team size.

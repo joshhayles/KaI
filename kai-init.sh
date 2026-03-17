@@ -10,15 +10,27 @@ echo "Setting up KaI..."
 # Clone to temp directory
 git clone --quiet https://github.com/joshhayles/KaI.git .kai-tmp 2>/dev/null
 
-# Copy core files to project root
-cp .kai-tmp/KAI-CONSTITUTION.md .
-cp .kai-tmp/CLAUDE.md .
-cp .kai-tmp/ONBOARD-ME.md .
-cp .kai-tmp/CUSTOMIZE.md .
+# Create kai/ directory structure
+mkdir -p kai/docs/templates kai/docs/examples kai/projects/active
 
-# Copy examples
-mkdir -p examples
-cp -r .kai-tmp/examples/* examples/ 2>/dev/null || true
+# Copy KaI files into kai/
+cp .kai-tmp/kai/KAI-CONSTITUTION.md kai/
+cp .kai-tmp/kai/ONBOARD-ME.md kai/
+cp .kai-tmp/kai/docs/projects.md kai/docs/
+cp .kai-tmp/kai/docs/customizing.md kai/docs/
+cp -r .kai-tmp/kai/docs/templates/* kai/docs/templates/ 2>/dev/null || true
+cp -r .kai-tmp/kai/docs/examples/* kai/docs/examples/ 2>/dev/null || true
+
+# Handle CLAUDE.md — check if user already has one
+if [ -f "CLAUDE.md" ]; then
+  cp .kai-tmp/CLAUDE.md kai-CLAUDE.md
+  echo ""
+  echo "  Found existing CLAUDE.md."
+  echo "  Created kai-CLAUDE.md alongside it."
+  echo "  During onboarding, your Claude will help you connect them."
+else
+  cp .kai-tmp/CLAUDE.md .
+fi
 
 # Clean up
 rm -rf .kai-tmp

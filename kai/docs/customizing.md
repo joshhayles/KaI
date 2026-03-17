@@ -12,8 +12,8 @@ During onboarding, you and your Claude built your initial routing table. As your
 ```markdown
 | Developer Says | Action |
 |----------------|--------|
-| "Let's work on the API" | Read `domains/api/decisions.md` |
-| "What's our test strategy?" | Read `domains/testing/strategy.md` |
+| "Let's work on the API" | Read `kai/domains/api/decisions.md` |
+| "What's our test strategy?" | Read `kai/domains/testing/strategy.md` |
 ```
 
 **When to add a route:** When you catch yourself re-explaining the same context more than once. That's the signal — capture it in a file and add a route.
@@ -24,10 +24,10 @@ During onboarding, you and your Claude built your initial routing table. As your
 
 ## Domain Folders
 
-If your project has distinct knowledge areas, create a `domains/` folder:
+If your project has distinct knowledge areas, create a `domains/` folder inside `kai/`:
 
 ```
-domains/
+kai/domains/
 ├── auth/           ← Architecture decisions, conventions
 ├── database/       ← Schema patterns, migration history
 └── deployment/     ← Infrastructure, CI/CD
@@ -42,16 +42,16 @@ Each folder holds markdown files your Claude reads **only when the conversation 
 ### New Projects
 
 ```
-projects/active/my-feature/
+kai/projects/active/my-feature/
 └── README.md       ← Goal, current state, decisions, learnings
 ```
 
-The README is the only required file. Your Claude reads it at session start when you reference this project — that's the bookmark.
+The README is the only required file. Your Claude reads it at session start when you reference this project — that's the bookmark. See [projects.md](projects.md) for the full guide on project lifecycle, templates, and best practices.
 
 ### Completing Projects
 
 ```bash
-mv projects/active/my-feature projects/completed/my-feature
+mv kai/projects/active/my-feature kai/projects/completed/my-feature
 ```
 
 History stays. Your Claude can reference completed projects when relevant.
@@ -64,7 +64,7 @@ For larger projects, add phase folders with their own READMEs. Small projects do
 
 ## Profile Updates
 
-Your `profile.md` evolves. Update it when:
+Your `kai/profile.md` evolves. Update it when:
 - You're learning a new stack (helps your Claude teach at the right level)
 - Your role or goals change
 - You discover new preferences about how you work with AI
@@ -74,11 +74,11 @@ Your `profile.md` evolves. Update it when:
 Multiple people in one repo can each have a profile:
 
 ```
-domains/alice/profile.md
-domains/bob/profile.md
+kai/domains/alice/profile.md
+kai/domains/bob/profile.md
 ```
 
-For shared team conventions (coding standards, naming patterns, review process), create `domains/team/conventions.md` and add a route in CLAUDE.md.
+For shared team conventions (coding standards, naming patterns, review process), create `kai/domains/team/conventions.md` and add a route in CLAUDE.md.
 
 ---
 
