@@ -16,6 +16,8 @@ Context that compounds into:
 - Teaching that knows what you've already mastered
 - Knowledge that follows you across projects, repos, and tools
 
+> **Note:** KaI is currently designed for solo developers working with Claude Code. Team support is planned.
+
 ---
 
 ## What Changes
@@ -38,9 +40,14 @@ your-repo/
   CLAUDE.md                     ← your AI reads this every session (routing + identity)
   kai/
     KAI-CONSTITUTION.md         ← 12 collaboration principles
-    profile.md                  ← who you are (created during onboarding)
+    ONBOARD-ME.md               ← onboarding script (your AI reads this, not you)
+    profile.md                  ← who you are (populated during onboarding)
     projects/                   ← your active work, decisions, learnings
-    docs/                       ← reference docs, templates, examples
+    docs/                       ← guides, templates, examples
+      projects.md               ← project lifecycle and best practices
+      customizing.md            ← routes, domains, growing your setup
+      templates/                ← copy-pasteable project and profile templates
+      examples/                 ← fully populated CLAUDE.md example
 ```
 
 Already have a `CLAUDE.md`? No problem — KaI detects it and creates `kai-CLAUDE.md` instead. During onboarding, your Claude helps you connect the two.
@@ -60,11 +67,11 @@ Already have a `CLAUDE.md`? No problem — KaI detects it and creates `kai-CLAUD
 The routing table is the core of CLAUDE.md. Instead of loading everything, your AI matches what you're working on to the right context:
 
 ```
-| Topic          | Context Loaded                    |
-|----------------|-----------------------------------|
-| "auth work"    | → routes/auth.md                  |
-| "deploy"       | → routes/infrastructure.md        |
-| "API design"   | → routes/api.md + decisions log   |
+| Topic          | Context Loaded                         |
+|----------------|----------------------------------------|
+| "auth work"    | → kai/domains/auth/decisions.md        |
+| "deploy"       | → kai/domains/deployment/runbook.md    |
+| "API design"   | → kai/domains/api/decisions.md         |
 ```
 
 *(These are examples — you build your own routes during onboarding and add more as your project grows. See [kai/docs/examples/CLAUDE-example.md](kai/docs/examples/CLAUDE-example.md) for a fully populated setup.)*
@@ -82,8 +89,6 @@ Three modes, configured during onboarding based on how you prefer to work:
 - **Build & Learn** — say "let's build and learn." Real work with learning woven in — explanations at decision points, not lectures.
 
 If you're an execution-first developer who never wants to be quizzed, KaI respects that. If you want to be tested on every new concept, KaI does that too. You configure it once during onboarding.
-
-> **Note:** KaI is currently designed for solo developers. Team support is planned.
 
 ---
 
@@ -136,8 +141,8 @@ After onboarding:
 
 | Phase | What | Status |
 |-------|------|--------|
-| **Core** | Constitution + routing + onboarding + developer-aware context | v0.1 |
-| **Methodology** | Project lifecycle, templates, structured reflection | v0.2 |
+| **Core** | Constitution + routing + onboarding + developer-aware context | v0.1 (March 2026) |
+| **Methodology** | Project lifecycle, templates, structured reflection | v0.2 (March 2026) |
 | **KaI Integrations** | Developer-aware routing extended to MCP servers, workflows, and external tools | Planned |
 | **Ecosystem** | Multi-AI coordination, cross-instance context sharing | Future |
 

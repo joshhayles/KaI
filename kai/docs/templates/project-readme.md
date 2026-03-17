@@ -47,4 +47,4 @@
 
 ## Learnings
 
-{Captured at completion. What surprised you, what you'd do differently, what pattern applies beyond this project.}
+{Reflections are added during work as they arise (decisions, surprises, model shifts). The full Learnings section is reviewed and finalized at completion — what surprised you, what you'd do differently, what applies beyond this project.}

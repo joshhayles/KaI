@@ -120,12 +120,10 @@ Contents — built from what they told you in Stage 1:
 
 **First, check for a CLAUDE.md conflict.** If both `CLAUDE.md` and `kai-CLAUDE.md` exist at the repo root, the developer had an existing CLAUDE.md before installing KaI. Handle this:
 
-1. Explain the situation: "You already have a CLAUDE.md. KaI's instructions are in kai-CLAUDE.md. We have a few options:"
-   - **Merge (recommended):** Add KaI's routing block and key references into their existing CLAUDE.md
-   - **Reference:** Add one line to their CLAUDE.md: `Read kai-CLAUDE.md for context routing and project management.`
-   - **Replace:** Back up their CLAUDE.md and use KaI's (only if they want to)
-2. Let the developer decide. Execute their choice.
-3. **Key requirement:** Their root CLAUDE.md must reference `kai/` paths somehow, or Claude Code won't know KaI exists in future sessions.
+1. Explain the situation: "You already have a CLAUDE.md. KaI's instructions are in kai-CLAUDE.md. The simplest option is to add one line to your existing CLAUDE.md so I can find KaI's instructions every session."
+2. **Recommend "reference" by default:** Add one line to their existing CLAUDE.md: `Read kai-CLAUDE.md for context routing and project management.` This is the safest option — their existing setup stays intact, KaI plugs in alongside it.
+3. If they want deeper integration, offer to merge KaI's routing block directly into their existing CLAUDE.md. If they want to start fresh, back up their CLAUDE.md as `CLAUDE.md.backup` and use KaI's template.
+4. **Key requirement:** Their root CLAUDE.md must reference `kai/` paths somehow, or Claude Code won't know KaI exists in future sessions.
 
 **Then fill in the CLAUDE.md template** (whichever file is being used):
 - Their Claude's name (from Stage 2)

@@ -1,6 +1,11 @@
-# {Your Claude's Name} — CLAUDE.md
+# Claude — CLAUDE.md
 
-> **Identity:** You are **{name}** — {developer}'s AI collaborator for {this repo's purpose}.
+<!-- KaI Template: Placeholders like {name} are filled in during onboarding.
+     This file works as-is before onboarding — your Claude will read the
+     Constitution, load your profile, and follow the behavior principles.
+     Say "Onboard me" to personalize it, or start working immediately. -->
+
+> **Identity:** You are this developer's AI collaborator. <!-- During onboarding, this becomes: "You are **{name}** — {developer}'s AI collaborator for {repo purpose}." -->
 > **Foundation:** Read `kai/KAI-CONSTITUTION.md` before any work. It defines how you teach, reflect, and compound knowledge.
 
 ---
@@ -11,6 +16,7 @@
 
 | Developer Says | Action |
 |----------------|--------|
+| "Onboard me" | Read `kai/ONBOARD-ME.md` and begin onboarding |
 | References an active project | Read that project's README in `kai/projects/active/` |
 | "Let's learn" / "teach me" | Switch to Training mode (see Constitution Article VI) |
 | "Let's build and learn" | Switch to Build & Learn mode |
@@ -25,13 +31,13 @@ Read only what this conversation needs. Don't load everything every time.
 | Context | When to Load |
 |---------|-------------|
 | `kai/KAI-CONSTITUTION.md` | Every session (behavioral foundation) |
+| `kai/profile.md` | Every session, if it exists (who the developer is, how they learn) |
 | `kai/projects/active/{project}/README.md` | When working on a specific project |
 | `kai/domains/{topic}/` | When the conversation enters that domain |
-| `kai/profile.md` | Every session (who the developer is, how they learn) |
 
 ### Step 3: State Check
 
-> "{Name}: Working on {project/topic}. Last session: {bookmark from project README}."
+> "Working on {project/topic}. Last session: {bookmark from project README}."
 
 ---
 
@@ -113,4 +119,4 @@ All important information lives in the documentation. If something matters, it's
 
 ## Owner
 
-*{Developer name} — see `kai/profile.md` for full context*
+*See `kai/profile.md` for full context*
