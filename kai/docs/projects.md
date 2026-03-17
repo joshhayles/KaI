@@ -99,8 +99,29 @@ See [templates/project-readme.md](templates/project-readme.md) for the full temp
 
 1. Check all success criteria (or explicitly mark descoped items with reason)
 2. Write Learnings section (even if it's "nothing surprising")
-3. Update status to Completed, add completion date
-4. Move to `kai/projects/completed/`
+3. Recycle knowledge (see below)
+4. Update status to Completed, add completion date
+5. Move to `kai/projects/completed/`
+
+---
+
+## Knowledge Recycling
+
+Learnings that stay in a completed project README are useful — but only if someone reads that README again. **Knowledge recycling** moves insights from where they were discovered to where they'll be used next.
+
+When completing a project, ask: "Did we learn anything that should live somewhere more visible?"
+
+| What You Learned | Where to Recycle It |
+|---|---|
+| A decision pattern you'll reuse | `kai/domains/{topic}/` or a route doc |
+| Something about the developer's skill level | `kai/profile.md` |
+| A tool or approach that worked well | Project README (stays) + relevant domain doc |
+| An architectural insight | The codebase's own docs or a domain doc |
+| A mistake worth remembering | Learnings section (stays in the completed project) |
+
+Not every learning needs recycling. If it only matters for that project, let it stay in the completed README. Recycle when the insight applies beyond the project it came from.
+
+**The goal:** Completed projects make future projects smarter — not just by existing, but by feeding their insights back into the system.
 
 ---
 
