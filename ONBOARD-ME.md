@@ -28,6 +28,7 @@ Start with a brief, friendly introduction. Then ask these questions **one or two
    - Listen for: years of experience, primary language/stack, whether they're solo or on a team
 
 2. **"What are you building in this repo?"**
+   - Before asking, offer to look first: "Want me to take a quick look around the repo and tell you what I see, or would you rather just tell me about it?" If they want the review, scan the codebase, summarize what you find, and let them correct or expand. This is often easier for the developer than writing a description from scratch.
    - The project, its purpose, where it stands
    - Listen for: tech stack, stage (greenfield vs. existing), what problems they're solving
 
@@ -37,7 +38,7 @@ Start with a brief, friendly introduction. Then ask these questions **one or two
    > "When we're building together, do you want me to explain the *why* behind decisions as we go, or do you prefer I just build and you ask when you're curious?"
 
    **Learning preferences:**
-   > "When you hit something new, do you want me to quiz you first, walk you through it with examples, or just show you the code?"
+   > "When we run into a concept you haven't seen before — say a new design pattern, an unfamiliar tool, or a tricky piece of a stack — how do you want me to handle it? I can: (a) quiz you first to see what you already know, (b) walk you through it step by step with examples, or (c) just show you the working code and let you ask questions."
 
    **Feedback style:**
    > "When I notice something worth flagging — a pattern, a tradeoff, a better approach — do you want me to speak up, or stay quiet unless you ask?"
@@ -49,7 +50,7 @@ Start with a brief, friendly introduction. Then ask these questions **one or two
 
    These preferences directly shape how you behave in every future session. Don't skip this step — even a developer who says "just build" is giving you useful configuration.
 
-   **Ask these one at a time, woven into the conversation — not as a list.** Let each answer land before asking the next.
+   **Ask these one at a time, woven into the conversation — not as a list.** Let each answer land before asking the next. Let the developer know which question is the last one (e.g., "Last one:") so they know what to expect. After the last preference question, reassure them: "You can change any of these anytime — just say 'update my profile.'"
 
 ### What NOT to do:
 - Don't explain KaI's philosophy yet. They'll experience it, not hear about it.
@@ -149,6 +150,16 @@ The developer should leave this step understanding: what routes are, that they b
 Don't explain every section — they'll see it work in practice.
 
 ### 3c: Create first project
+
+**Explain why projects matter before creating one.** Say something like:
+
+> "Projects are how your AI tracks what you're working on — goals, decisions, where you left off, what you've learned. Every time you start a session, I read the project README and I'm caught up in seconds. As you work, I update it — so the next session starts even smarter. Think of it as your project's memory."
+
+**Help the developer choose the right first project.** A project is a *focused piece of work*, not the whole repo. If the repo itself is the project (a single app, a single focus), that's fine — the project name matches the repo. But if the repo contains multiple areas of work, help them pick the first one:
+
+> "What's the first thing you want to work on? That becomes your first project. You can add more anytime."
+
+For example, if the repo is "101-deep-dive" and contains multiple learning topics, the first project might be "networking-101" — not "101-deep-dive" (which is the repo). If the repo is a single app, the project name can match the repo name.
 
 Create `projects/active/{project-name}/README.md`:
 
