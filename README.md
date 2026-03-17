@@ -8,7 +8,7 @@ CLAUDE.md is a great starting point — your AI reads it every session. But a si
 
 KaI gives your AI structured knowledge about you, your projects, and your decisions — and loads only what's relevant for each session. Not everything at once. Not a pile of docs. Infrastructure that carries forward.
 
-Setup is a 10-minute conversation. You say "Onboard me," talk about what you're building and how you work, and KaI produces a personalized setup. After that, every session starts where the last one left off.
+Setup is a short conversation. You say "Onboard me," talk about what you're building and how you work, and KaI produces a personalized setup. After that, every session starts where the last one left off.
 
 Context that compounds into:
 - An AI that remembers your architecture decisions from three months ago
@@ -49,7 +49,13 @@ Already have a `CLAUDE.md`? No problem — KaI detects it and adds a reference l
 
 Your Claude walks you through a real conversation — not a form. Who you are, what you're building, how you want to work. It asks how you prefer to learn, whether you want explanations as you go or just want to build, and how much feedback you want. Then it produces a personalized setup: your profile, your routing table, your project structure. Everything lives in your repo, fully controlled by you.
 
-After onboarding, just start working. Next session, your AI reads your profile and project state automatically — no setup, no re-explaining.
+After onboarding, just start working. Next session, your AI reads your profile and project state automatically — no setup, no re-explaining. Here's what that looks like:
+
+> **Session 2:**
+> You: "Let's work on the API."
+> Claude: "Got it. Last session we finished the auth endpoints. Next up was the pagination logic for the listings route. Want to pick up there?"
+
+That's the compounding. No re-explaining. No context lost.
 
 **The core principle:** You should be able to delete any AI session and start fresh with zero context loss. If something matters, it's in a file.
 
@@ -98,7 +104,7 @@ The routing table is the core of CLAUDE.md. Instead of loading everything, your 
 
 *(These are examples from a mature setup — yours starts simple and grows as you add routes. See [kai/docs/examples/CLAUDE-example.md](kai/docs/examples/CLAUDE-example.md) for a fully populated setup.)*
 
-MCP (Model Context Protocol) and skills route your AI to the right *tool*. KaI routes your AI to the right *context about you*. And because KaI knows who you are, the same topic can load differently based on your preferences and skill level. That's developer-aware context routing.
+MCP (Model Context Protocol) and skills route your AI to the right *tool*. KaI routes your AI to the right *context about you*. And because KaI knows who you are, the same topic can load differently based on your preferences and skill level. That's what we call developer-aware context routing.
 
 ### The Teaching System
 
