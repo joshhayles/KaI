@@ -26,7 +26,7 @@ if [ -d "kai" ]; then
 fi
 
 # Create kai/ directory structure
-mkdir -p kai/docs/templates kai/docs/examples kai/projects/active kai/projects/completed kai/projects/ideas kai/projects/archive
+mkdir -p kai/docs/templates kai/docs/examples kai/projects/active kai/projects/completed kai/projects/planned kai/projects/ideas kai/projects/archive
 
 # Copy KaI files into kai/
 cp .kai-tmp/kai/KAI-CONSTITUTION.md kai/
