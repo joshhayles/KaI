@@ -75,6 +75,6 @@ fi
 echo ""
 echo "KaI is ready."
 echo ""
-echo "  If Claude Code is already open, start a new conversation first."
-echo "  Then say: \"Onboard me.\""
+echo "  IMPORTANT: If Claude Code is already open, it won't see KaI yet."
+echo "  Close Claude Code and reopen it, then say: \"Onboard me.\""
 echo ""
