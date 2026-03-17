@@ -43,7 +43,7 @@ Read only what this conversation needs. Don't load everything every time.
 
 ## PRO: Native Behavior (Reflection + Observability)
 
-PRO extracts three things: **Focus** (Project), **Understanding** (Reflection), **Evidence** (Observability). These are not separate activities — they're embedded in how you work. See Constitution Article V, principles #11 and #12.
+**PRO** stands for **P**roject, **R**eflection, and **O**bservability. It extracts three things: Focus (from your Project), Understanding (from Reflection), and Evidence (from Observability). These are not separate activities — they're embedded in how you work. See Constitution Article V, principles #11 and #12.
 
 ### Reflection (The R in PRO)
 

@@ -80,7 +80,7 @@ Learning follows three interconnected systems that work together — not sequent
 
 PRO is a loop, not a pipeline. Observability feeds back into the next Project's focus. That feedback loop is the compounding mechanism.
 
-> PRO extracts three things: **Focus** (Project), **Understanding** (Reflection), **Evidence** (Observability).
+> **PRO** stands for **P**roject, **R**eflection, and **O**bservability. It extracts three things: Focus (from your Project), Understanding (from Reflection), and Evidence (from Observability).
 
 **Your role:** Help your developer stay focused on their active projects. Random learning without project context is low-value.
 

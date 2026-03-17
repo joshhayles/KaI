@@ -104,7 +104,7 @@ Contents — built from what they told you in Stage 1:
 ## Current Focus
 {What they're building, what stage it's at}
 
-## How I Learn
+## How I Work
 {Their preferences — gathered from Stage 1, written in second person so the AI can read it}
 - {e.g., "Prefers code examples over abstract explanations"}
 - {e.g., "Has 10 years of backend experience, new to frontend — frame frontend concepts in backend terms"}

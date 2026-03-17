@@ -10,8 +10,8 @@ trap 'rm -rf .kai-tmp' EXIT
 
 echo "Setting up KaI..."
 
-# Clone repo — show errors if network fails
-if ! git clone --quiet https://github.com/joshhayles/KaI.git .kai-tmp; then
+# Clone repo (shallow — no history needed) — show errors if network fails
+if ! git clone --quiet --depth 1 https://github.com/joshhayles/KaI.git .kai-tmp; then
   echo ""
   echo "  Error: Could not download KaI. Check your network connection and try again."
   exit 1
@@ -34,8 +34,8 @@ cp .kai-tmp/kai/ONBOARD-ME.md kai/
 cp .kai-tmp/kai/docs/README.md kai/docs/
 cp .kai-tmp/kai/docs/projects.md kai/docs/
 cp .kai-tmp/kai/docs/customizing.md kai/docs/
-cp -r .kai-tmp/kai/docs/templates/* kai/docs/templates/ 2>/dev/null || true
-cp -r .kai-tmp/kai/docs/examples/* kai/docs/examples/ 2>/dev/null || true
+cp -r .kai-tmp/kai/docs/templates/* kai/docs/templates/ 2>/dev/null || echo "  Warning: could not copy templates"
+cp -r .kai-tmp/kai/docs/examples/* kai/docs/examples/ 2>/dev/null || echo "  Warning: could not copy examples"
 
 # Create stub profile (populated during onboarding)
 cat > kai/profile.md << 'PROFILE'
@@ -50,7 +50,7 @@ cat > kai/profile.md << 'PROFILE'
 ## Current Focus
 {What you're building}
 
-## How I Learn
+## How I Work
 {Your preferences — how you like to work with AI}
 
 ## Goals
@@ -60,13 +60,14 @@ PROFILE
 # Handle CLAUDE.md — check if user already has one
 if [ -f "CLAUDE.md" ]; then
   cp .kai-tmp/CLAUDE.md kai-CLAUDE.md
+  # Auto-append reference so Claude Code finds KaI on next session
+  echo "" >> CLAUDE.md
+  echo "<!-- KaI: Knowledge as Infrastructure -->" >> CLAUDE.md
+  echo "Read kai-CLAUDE.md for context routing and project management." >> CLAUDE.md
   echo ""
   echo "  Found existing CLAUDE.md."
-  echo "  Created kai-CLAUDE.md alongside it."
-  echo "  During onboarding, your Claude will help you connect them."
-  echo ""
-  echo "  Quick option: add this line to your CLAUDE.md:"
-  echo "    Read kai-CLAUDE.md for context routing and project management."
+  echo "  Created kai-CLAUDE.md with KaI's instructions."
+  echo "  Added a reference line to your CLAUDE.md (marked with <!-- KaI --> for easy removal)."
 else
   cp .kai-tmp/CLAUDE.md .
 fi

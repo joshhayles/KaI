@@ -69,16 +69,16 @@ Your `kai/profile.md` evolves. Update it when:
 - Your role or goals change
 - You discover new preferences about how you work with AI
 
-### Team Usage
+### Team Usage (Experimental)
 
-Multiple people in one repo can each have a profile:
+KaI is designed for solo developers, but basic team support is possible. Multiple people in one repo can each have a profile:
 
 ```
 kai/domains/alice/profile.md
 kai/domains/bob/profile.md
 ```
 
-For shared team conventions (coding standards, naming patterns, review process), create `kai/domains/team/conventions.md` and add a route in CLAUDE.md.
+For shared team conventions (coding standards, naming patterns, review process), create `kai/domains/team/conventions.md` and add a route in CLAUDE.md. Full team support is planned for a future release.
 
 ---
 

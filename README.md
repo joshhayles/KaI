@@ -31,6 +31,32 @@ Context that compounds into:
 
 ---
 
+## Getting Started
+
+Run this from your project's root directory:
+
+```bash
+# 1. Install KaI
+curl -fsSL https://raw.githubusercontent.com/joshhayles/KaI/main/kai-init.sh | bash
+
+# 2. Open Claude Code and say:
+# "Onboard me."
+```
+
+Or manually: clone the repo, copy the `kai/` folder and `CLAUDE.md` to your project root.
+
+Already have a `CLAUDE.md`? No problem — KaI detects it and adds a reference line automatically. Your existing setup stays intact.
+
+Your Claude walks you through a real conversation — not a form. Who you are, what you're building, how you want to work. It asks how you prefer to learn, whether you want explanations as you go or just want to build, and how much feedback you want. Then it produces a personalized setup: your profile, your routing table, your project structure. Everything lives in your repo, fully controlled by you.
+
+After onboarding, just start working. Next session, your AI reads your profile and project state automatically — no setup, no re-explaining.
+
+**The core principle:** You should be able to delete any AI session and start fresh with zero context loss. If something matters, it's in a file.
+
+**Don't like KaI?** Just tell Claude "delete KaI" and it's gone. One folder removed, your repo is back to how it was.
+
+---
+
 ## How It Works
 
 KaI adds a `kai/` folder to your repo plus one file at root (`CLAUDE.md`). Everything is organized and self-contained.
@@ -50,15 +76,11 @@ your-repo/
       examples/                 ← fully populated CLAUDE.md example
 ```
 
-Already have a `CLAUDE.md`? No problem — KaI detects it and creates `kai-CLAUDE.md` instead. During onboarding, your Claude helps you connect the two.
-
-**Don't like KaI?** Just tell Claude "delete KaI" and it's gone. One folder removed, your repo is back to how it was.
-
 | File | What It Does |
 |------|-------------|
 | **CLAUDE.md** | Your AI's identity, behavior, and routing table. Maps topics to context files — "when you say X, I load Y." |
 | **kai/KAI-CONSTITUTION.md** | 12 principles that shape how your AI collaborates — teaching, context-loading, guardrails. |
-| **kai/profile.md** | *(created during onboarding)* Who you are — experience, goals, how you work best. |
+| **kai/profile.md** | Who you are — experience, goals, how you work best. Populated during onboarding. |
 | **kai/projects/** | Your active work — goals, status, decisions, learnings. Your AI reads a project README and has full context in seconds. |
 | **kai/docs/** | Project guides, templates, examples — reference material for you and your Claude. |
 
@@ -74,13 +96,13 @@ The routing table is the core of CLAUDE.md. Instead of loading everything, your 
 | "API design"   | → kai/domains/api/decisions.md         |
 ```
 
-*(These are examples — you build your own routes during onboarding and add more as your project grows. See [kai/docs/examples/CLAUDE-example.md](kai/docs/examples/CLAUDE-example.md) for a fully populated setup.)*
+*(These are examples from a mature setup — yours starts simple and grows as you add routes. See [kai/docs/examples/CLAUDE-example.md](kai/docs/examples/CLAUDE-example.md) for a fully populated setup.)*
 
-MCP and skills route your AI to the right *tool*. KaI routes your AI to the right *context about you*. And because KaI knows who you are, the same topic can load differently based on your preferences and skill level. That's developer-aware context routing.
+MCP (Model Context Protocol) and skills route your AI to the right *tool*. KaI routes your AI to the right *context about you*. And because KaI knows who you are, the same topic can load differently based on your preferences and skill level. That's developer-aware context routing.
 
 ### The Teaching System
 
-Persistence is table one. KaI also teaches.
+Persistence is table stakes. KaI also teaches.
 
 Three modes, configured during onboarding based on how you prefer to work:
 
@@ -104,28 +126,6 @@ I'm still learning, and this is one approach that's been working for me — I ma
 
 ---
 
-## Getting Started
-
-Run this from your project's root directory:
-
-```bash
-# 1. Install KaI
-curl -fsSL https://raw.githubusercontent.com/joshhayles/KaI/main/kai-init.sh | bash
-
-# 2. Open Claude Code and say:
-# "Onboard me."
-```
-
-Or manually: clone the repo, copy the `kai/` folder and `CLAUDE.md` to your project root.
-
-Your Claude walks you through a real conversation — not a form. Who you are, what you're building, how you want to work. It asks how you prefer to learn, whether you want explanations as you go or just want to build, and how much feedback you want. Then it produces a personalized setup: your profile, your routing table, your project structure. Everything lives in your repo, fully controlled by you.
-
-After onboarding, just start working. Next session, your AI reads your profile and project state automatically — no setup, no re-explaining.
-
-**The core principle:** You should be able to delete any AI session and start fresh with zero context loss. If something matters, it's in a file.
-
----
-
 ## What's Next
 
 After onboarding:
@@ -141,8 +141,7 @@ After onboarding:
 
 | Phase | What | Status |
 |-------|------|--------|
-| **Core** | Constitution + routing + onboarding + developer-aware context | v0.1 (March 2026) |
-| **Methodology** | Project lifecycle, templates, structured reflection | v0.2 (March 2026) |
+| **Core + Methodology** | Constitution, routing, onboarding, developer-aware context, project lifecycle, templates, structured reflection | v0.1 (March 2026) |
 | **KaI Integrations** | Developer-aware routing extended to MCP servers, workflows, and external tools | Planned |
 | **Ecosystem** | Multi-AI coordination, cross-instance context sharing | Future |
 
