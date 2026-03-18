@@ -2,11 +2,11 @@
 
 *(KaI rhymes with "eye")*
 
-> Every morning, your AI is brilliant and brand new. It can build anything — but it doesn't remember what you've built together. It doesn't remember the decisions you've made. It loses valuable context. So I built something to fix it. It's called KaI.
+> **Information floods every AI session. KaI pans for knowledge and knows where to keep it.**
 
-CLAUDE.md is a great starting point — your AI reads it every session. But a single file can only take you so far. As your projects grow, your context grows, and a flat file can't deliver the right knowledge at the right moment. You end up loading everything or missing what matters.
+Your AI already knows how to code, debug, explain, and refactor. What it doesn't have is a philosophy of collaboration — a way to recognize what matters, structure it, and carry it forward so every session builds on the last instead of starting from zero.
 
-KaI gives your AI structured knowledge about you, your projects, and your decisions — and loads only what's relevant for each session. Not everything at once. Not a pile of docs. Infrastructure that carries forward.
+KaI gives your Claude that lens. Same AI. Different way of seeing.
 
 Setup is a short conversation. You say "Onboard me," talk about what you're building and how you work, and KaI produces a personalized setup. After that, every session starts where the last one left off.
 
@@ -85,7 +85,7 @@ your-repo/
 | File | What It Does |
 |------|-------------|
 | **CLAUDE.md** | Your AI's identity, behavior, and routing table. Maps topics to context files — "when you say X, I load Y." |
-| **kai/KAI-CONSTITUTION.md** | 12 principles that shape how your AI collaborates — teaching, context-loading, guardrails. |
+| **kai/KAI-CONSTITUTION.md** | 12 principles that shape how your AI collaborates. How your Claude learns to pan for knowledge. |
 | **kai/profile.md** | Who you are — experience, goals, how you work best. Populated during onboarding. |
 | **kai/projects/** | Your active work — goals, status, decisions, learnings. Your AI reads a project README and has full context in seconds. |
 | **kai/docs/** | Project guides, templates, examples — reference material for you and your Claude. |
@@ -161,4 +161,4 @@ KaI is early. If any of this resonates — or if you think I'm approaching it wr
 
 Built by [Josh Hayles](https://linkedin.com/in/joshhayles)
 
-*KaI: Knowledge as Infrastructure — context that compounds.*
+*KaI: Knowledge as Infrastructure — pans for knowledge and knows where to keep it.*
