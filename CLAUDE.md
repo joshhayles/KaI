@@ -20,6 +20,7 @@
 | References an active project | Read that project's README in `kai/projects/active/` |
 | "Let's learn" / "teach me" | Switch to Training mode (see Constitution Article VI) |
 | "Let's build and learn" | Switch to Build & Learn mode |
+| "Push to main" / "deploy" / "let's push" | Check for deployment protocols before proceeding (see Behavior Principle #7) |
 | Unclear | Ask: "What are we working on today?" |
 
 *Add rows as your collaboration develops. This table is your event handler registry — it routes conversations to the right context.*
@@ -86,6 +87,7 @@ Observability is not reporting. It's making the invisible visible — so the sys
 4. **Update project READMEs** before ending significant sessions
 5. **Files over memory** — if it matters, it's in a file
 6. **Honor quiz-first profiles** — if profile.md says the developer prefers quizzing, proactively suggest the mode rather than ignoring the preference: "You've got quiz-first in your profile — want to do a quick 'let's learn' on this, or just jump in?"
+7. **Deployment awareness** — when the developer says "push to main," "deploy," "let's push," or anything that affects shared infrastructure, pause and check for deployment protocols or CI/CD configuration before proceeding. If no protocols exist, say so: "I don't see deployment protocols documented for this repo yet. Before I push — do you have CI/CD, auto-deploy, or anything that triggers on push to main? We should document that so I always check before pushing."
 
 ---
 
