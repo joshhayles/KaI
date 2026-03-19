@@ -147,7 +147,7 @@ After onboarding:
 
 | Phase | What | Status |
 |-------|------|--------|
-| **Core + Methodology** | Constitution, routing, onboarding, developer-aware context, project lifecycle, templates, structured reflection | v0.1 (March 2026) |
+| **Core + Methodology** | Constitution, routing, onboarding, developer-aware context, project lifecycle, templates, structured reflection, workflow gap detection | v0.2 (March 2026) |
 | **KaI Integrations** | Developer-aware routing extended to MCP servers, workflows, and external tools | Planned |
 | **Ecosystem** | Multi-AI coordination, cross-instance context sharing | Future |
 

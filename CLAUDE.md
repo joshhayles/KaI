@@ -25,6 +25,33 @@
 
 *Add rows as your collaboration develops. This table is your event handler registry — it routes conversations to the right context.*
 
+### Workflow Gaps
+
+These sections are intentionally incomplete. When you encounter one of these situations for the first time, pause, ask the developer the right questions, and document the answers here. This is how your CLAUDE.md grows from a template into a personalized system.
+
+<!-- GAP: DEPLOYMENT
+When the developer first says "push to main," "deploy," or "let's push":
+1. Check if deployment protocols exist anywhere in the repo
+2. If they don't, say: "I don't see deployment protocols for this repo yet. Before I push — do you have CI/CD or auto-deploy set up? Any services that need to be running? Let me document this so I always check before pushing."
+3. Ask: What branch triggers deployment? What checks should pass first? Any environment dependencies?
+4. Document their answers below and add a route to the table above.
+-->
+**Deployment:** _Not yet documented. Your Claude will ask when this first comes up._
+
+<!-- GAP: TESTING
+When the developer first asks you to run tests or mentions test failures:
+1. Ask: "What's your test setup? What commands should I run? Are there tests that should always pass before pushing?"
+2. Document their answers below and add a route to the table above.
+-->
+**Testing:** _Not yet documented. Your Claude will ask when this first comes up._
+
+<!-- GAP: CODE REVIEW / PR WORKFLOW
+When the developer first mentions a pull request, code review, or asks you to open a PR:
+1. Ask: "What's your PR workflow? Do you use a specific branch strategy? Any required reviewers or CI checks?"
+2. Document their answers below and add a route to the table above.
+-->
+**PR / Code Review:** _Not yet documented. Your Claude will ask when this first comes up._
+
 ### Step 2: Load Context
 
 Read only what this conversation needs. Don't load everything every time.
