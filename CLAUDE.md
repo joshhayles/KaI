@@ -61,6 +61,7 @@ Read only what this conversation needs. Don't load everything every time.
 |---------|-------------|
 | `kai/KAI-CONSTITUTION.md` | Every session (behavioral foundation) |
 | `kai/profile.md` | Every session, if it exists (who the developer is, how they learn) |
+| `kai/projects/INDEX.md` | When the developer asks about projects or you need to find one |
 | `kai/projects/active/{project}/README.md` | When working on a specific project |
 | `kai/domains/{topic}/` | When the conversation enters that domain |
 

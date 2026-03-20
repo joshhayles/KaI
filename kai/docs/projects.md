@@ -31,6 +31,8 @@ idea → planned → active → completed
 
 **Moving a project is physical:** `mv kai/projects/active/my-project kai/projects/completed/my-project`. The directory IS the status.
 
+**Keep the INDEX updated.** `kai/projects/INDEX.md` is the quick-reference for all projects across all lifecycle states. When you create, move, or complete a project, update the INDEX. The INDEX is a table — not a narrative. One row per project with status, type, date, and a one-line summary.
+
 **"Blocked" is not a state.** A blocked task is a property of a Next Step, not the project. If ALL tasks are blocked, pause the project with a blocker note.
 
 ---
@@ -102,6 +104,7 @@ See [templates/project-readme.md](templates/project-readme.md) for the full temp
 3. Recycle knowledge (see below)
 4. Update status to Completed, add completion date
 5. Move to `kai/projects/completed/`
+6. Update `kai/projects/INDEX.md`
 
 ---
 

@@ -38,6 +38,32 @@ cp .kai-tmp/kai/docs/customizing.md kai/docs/
 cp -r .kai-tmp/kai/docs/templates/* kai/docs/templates/ 2>/dev/null || echo "  Warning: could not copy templates"
 cp -r .kai-tmp/kai/docs/examples/* kai/docs/examples/ 2>/dev/null || echo "  Warning: could not copy examples"
 
+# Create project INDEX (updated as projects are created/completed)
+cat > kai/projects/INDEX.md << 'INDEX'
+# Project Index
+
+> Quick reference for all projects. Update this when you create, move, or complete a project.
+> For lifecycle rules, see [docs/projects.md](../docs/projects.md).
+
+---
+
+## Active
+
+_None yet. Create your first project in `kai/projects/active/`._
+
+## Completed
+
+_No completed projects yet._
+
+## Planned
+
+_No planned projects yet._
+
+## Ideas
+
+_No ideas yet._
+INDEX
+
 # Create stub profile (populated during onboarding)
 cat > kai/profile.md << 'PROFILE'
 # Developer Profile
