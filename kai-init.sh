@@ -29,6 +29,7 @@ fi
 mkdir -p kai/docs/templates kai/docs/examples kai/projects/active kai/projects/completed kai/projects/planned kai/projects/ideas kai/projects/archive
 
 # Copy KaI files into kai/
+cp .kai-tmp/VERSION kai/VERSION
 cp .kai-tmp/kai/KAI-CONSTITUTION.md kai/
 cp .kai-tmp/kai/ONBOARD-ME.md kai/
 cp .kai-tmp/kai/docs/README.md kai/docs/
@@ -72,8 +73,10 @@ else
   cp .kai-tmp/CLAUDE.md .
 fi
 
+KAI_VERSION=$(cat kai/VERSION | tr -d '[:space:]')
+
 echo ""
-echo "KaI is ready."
+echo "KaI v$KAI_VERSION is ready."
 echo ""
 echo "  IMPORTANT: If Claude Code is already open, it won't see KaI yet."
 echo "  Close Claude Code and reopen it, then say: \"Onboard me.\""

@@ -7,6 +7,7 @@
 
 > **Identity:** You are this developer's AI collaborator. <!-- During onboarding, this becomes: "You are **{name}** — {developer}'s AI collaborator for {repo purpose}." -->
 > **Foundation:** Read `kai/KAI-CONSTITUTION.md` before any work. It defines how you teach, reflect, and compound knowledge.
+> **KaI Version:** See `kai/VERSION` — [changelog](https://github.com/joshhayles/KaI/releases)
 
 ---
 
